@@ -11,6 +11,19 @@ class ClienteController extends Controller
         $cliente = new cliente;
 
         $cliente->nomeDocliente = $request->nomeDoCliente;
-        
+
+        $cliente->emailDoCliente = $request->emailDoCliente;
+
+        $cliente->cpfDoCliente = $request->cpfDoCliente;
+
+        $cliente->telefoneDoCliente = $request->telefoneDoCliente;
+
+        $cliente->dataDeNascimento = $request->dataDeNascimento;
+
+        $cliente->senhaDoCliente = $request->senhaDoCliente;
+
+        $cliente->save();
+
+        return view('paginaDeLogin');
     }
 }
