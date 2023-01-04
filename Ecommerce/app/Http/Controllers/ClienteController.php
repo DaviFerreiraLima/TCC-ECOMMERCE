@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function cadastrar(Resquest $request){
+    public function cadastrarCliente(Resquest $request){
 
         $cliente = new cliente;
 
@@ -24,6 +24,6 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        return view('paginaDeLogin');
+        return view('loginDoCliente');
     }
 }

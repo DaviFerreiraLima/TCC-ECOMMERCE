@@ -14,7 +14,7 @@
         <div class="right-tabela">
             <div class="input">
                 <div class="personalizacao-tabelas">
-                    <form class="textfield" action="/cliente/cadastrar" method="post">
+                    <form class="textfield" action="/cliente/cadastro" method="post">
                         @csrf
 
                         <label for="nomeDoCliente">Nome</label>
