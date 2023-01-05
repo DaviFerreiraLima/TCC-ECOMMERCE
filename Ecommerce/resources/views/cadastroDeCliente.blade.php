@@ -9,7 +9,9 @@
     <title>Cadastro do Usuário</title>
 </head>
 <body>
-    <header></header>
+    <header>
+
+    </header>
     <main>  
         <div class="right-tabela">
             <div class="input">
