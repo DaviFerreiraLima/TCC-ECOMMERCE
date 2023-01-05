@@ -14,10 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cadastroDeCliente');
+});
+
+Route::get('/cliente/cadastro', function(){
+    return view ('cadastroDeCliente');
 });
 
 
-Route::post('/cliente/cadastro', [ClienteController::class,'cadastrarCliente']);
+Route::get('/cliente/login', function(){
+    return view ('loginDoCliente');
+});
 
-Route::post('/cliente/login', [ClienteController::class ,'logarCliente']);
+Route::post('/cliente/cadastrar', [ClienteController::class,'cadastrarCliente']);
+
+Route::post('/cliente/logar', [ClienteController::class ,'logarCliente']);
