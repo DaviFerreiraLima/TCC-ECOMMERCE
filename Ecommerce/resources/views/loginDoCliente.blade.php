@@ -12,7 +12,27 @@
     </header>
 
     <main>
-        <form action="/cliente/logar" method="post"></form>
+    <div class="right-tabela">
+            <div class="input">
+                <div class="personalizacao-tabelas">
+                    <form class="textfield" action="/cliente/login" method="post">
+                        @csrf
+
+                        <label for="nomeDoCliente">Nome</label>
+                        <input type="text" name="nomeDoCliente" id="nomeDoCliente" placeholder="Seu Nome">
+
+                        <label for="emailDoCliente">Email</label>
+                        <input type="email" name="emailDoCliente" id="emailDoCliente" placeholder="Email">
+
+
+                        <div>
+                            <input type="submit" class="btn-login" value="cadastrarCliente">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>

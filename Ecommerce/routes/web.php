@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/cliente/cadastro', [ClienteController('cadastrarCliente')]);
+Route::post('/cliente/cadastro', [ClienteController::class,'cadastrarCliente']);
+
+Route::post('/cliente/login', [ClienteController::class ,'logarCliente']);

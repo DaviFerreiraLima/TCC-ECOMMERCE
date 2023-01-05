@@ -10,7 +10,7 @@
 </head>
 <body>
     <header></header>
-    <main>  Cliente
+    <main>  
         <div class="right-tabela">
             <div class="input">
                 <div class="personalizacao-tabelas">

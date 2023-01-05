@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
 class ClienteController extends Controller
 {
     public function cadastrarCliente(Resquest $request){
@@ -25,5 +27,14 @@ class ClienteController extends Controller
         $cliente->save();
 
         return view('loginDoCliente');
+    }
+
+    public function logarCliente(Resquest $request)
+    {
+
+        if(Auth::attempt(['email' => $request->$emailDoCliente, 'password' => $request->$senhaDoCliente])){
+            dd('Logou');
+        }
+            dd('Não logou');
     }
 }
