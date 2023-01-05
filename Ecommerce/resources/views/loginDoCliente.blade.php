@@ -15,7 +15,7 @@
     <div class="right-tabela">
             <div class="input">
                 <div class="personalizacao-tabelas">
-                    <form class="textfield" action="/cliente/login" method="post">
+                    <form class="textfield" action="/cliente/logar" method="post">
                         @csrf
 
                         <label for="nomeDoCliente">Nome</label>
