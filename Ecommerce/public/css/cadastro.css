@@ -1,0 +1,157 @@
+@import url(app.css);
+
+
+main{
+  width: 100vw;
+      height: 100vh;
+  background-color: rgba(0, 14, 24, 1);
+  position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 200000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.textfield{
+  display: grid;
+    width: 100%;
+    
+    justify-items: center;
+}
+
+.inputs{
+  display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+h1{
+  font-style: italic;
+  font-weight: 900;
+  font-size: 40px;
+  color: white;
+}
+
+.barra_progresso{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  width: 130px;
+  height: 15px;
+  background: transparent;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barra_progresso span{
+   border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    /* display: flex; */
+    /* row-gap: 10px; */
+    background: white;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.barra_progresso span:nth-child(1) {
+  background: rgba(0, 149, 255, 1);
+}
+
+.input{
+  width: 300px;
+  height: 67px;
+  margin: 8px 0;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: large;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.input:focus{
+  outline: 0;
+
+}
+
+.botão{
+  font-size: x-large;
+    font-weight: 600;
+  color: white;
+  background-color: rgba(0, 149, 255, 1);
+  width: 450px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.botão:hover{
+  transition: 0.6s;
+      background-color: rgba(1, 83, 141, 1);
+}
+
+.voltar{
+  left: 90px;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+
+.seta{
+  position: absolute;
+  padding: 20px;
+  box-shadow: 4px -4px 0 1px #fff inset;
+  border: solid transparent;
+  border-radius: 5px;
+  border-width: 0 0 2px 2px;
+  transform: rotate(45deg);
+  top: 60px;
+  left: 60px;
+  cursor: pointer;
+}
+
+.barra_divisao{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
+  align-items: center;
+}
+
+.barra_divisao span{
+  width: 210px;
+  height: 10px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  
+  
+  border: 2px solid rgba(255,255,255,1);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.barra_divisao span:nth-child(1){
+  height: 1px;
+  border: none;
+}
+
+.barra_divisao span:nth-child(3){
+  height: 1px;
+  border: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0%;
+}
