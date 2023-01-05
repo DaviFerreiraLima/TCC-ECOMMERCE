@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\ClienteController;
 
 Route::get('/', function () {
     return view('cadastroDeCliente');
@@ -26,6 +29,6 @@ Route::get('/cliente/login', function(){
     return view ('loginDoCliente');
 });
 
-Route::post('/cliente/cadastrar', [ClienteController::class,'cadastrarCliente']);
+Route::post('/cliente/cadastrar', [ClienteController::class,'cadastrar']);
 
-Route::post('/cliente/logar', [ClienteController::class ,'logarCliente']);
+Route::post('/cliente/logar', [ClienteController::class ,'logar']);

@@ -5,31 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
+use App\Models\ClienteCadastro as cliente;
 
 class ClienteController extends Controller
 {
-    public function cadastrarCliente(Resquest $request){
+    public function cadastrar(Request $request){
 
         $cliente = new cliente;
 
-        $cliente->nomeDocliente = $request->nomeDoCliente;
+        
+        $cliente->create($request->all());
 
-        $cliente->emailDoCliente = $request->emailDoCliente;
+        return view ('loginDoCliente');
 
-        $cliente->cpfDoCliente = $request->cpfDoCliente;
-
-        $cliente->telefoneDoCliente = $request->telefoneDoCliente;
-
-        $cliente->dataDeNascimento = $request->dataDeNascimento;
-
-        $cliente->senhaDoCliente = $request->senhaDoCliente;
-
-        $cliente->save();
-
-        return view('loginDoCliente');
+     
     }
 
-    public function logarCliente(Resquest $request)
+    public function logar(Request $request)
     {
 
         if(Auth::attempt(['email' => $request->$emailDoCliente, 'password' => $request->$senhaDoCliente])){
