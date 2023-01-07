@@ -45,21 +45,26 @@
 
                         <div class="inputs">
                         <input class="input" type="text" name="nomeDoCliente" id="nomeDoCliente" placeholder="Seu Nome">
-
+                        {{ $errors->has('nomeDoCliente') ? $errors->first('nomeDoCliente') : '' }}
                         
                         <input class="input" type="email" name="emailDoCliente" id="emailDoCliente" placeholder="Email">
+                        {{ $errors->has('emailDoCliente') ? $errors->first('emailDoCliente') : '' }}
                         
                         
                         <input class="input" type="text" name="cpfDoCliente" id="cpfDoCliente" placeholder="CPF">
+                        {{ $errors->has('cpfDoCliente') ? $errors->first('cpfDoCliente') : '' }}
                         
                         
                         <input class="input" type="text" name="telefoneDoCliente" id="telefoneDoCliente" placeholder="Telefone">
                         
+                        {{ $errors->has('telefoneDoCliente"') ? $errors->first('telefoneDoCliente') : '' }}
                         
                         <input class="input" type="date" name="dataDeNascimento" id="dataDeNascimento" placeholder="Data de Nascimento">
+                        {{ $errors->has('dataDeNascimento') ? $errors->first('dataDeNascimento') : '' }}
                         
-                       
+                        
                         <input class="input" type="password" name="senhaDoCliente" id="senhaDoCliente" placeholder="Senha">
+                        {{ $errors->has('senhaDoCliente') ? $errors->first('senhaDoCliente') : '' }}
                         <br>
                         </div>
 
