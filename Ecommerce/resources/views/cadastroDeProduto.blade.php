@@ -36,7 +36,7 @@
                             <br>
 
 
-                        <input value="{{ old('imagemDoProduto') }}" class="input" type="image" name="imagemDoProduto" id="imagemDoProduto" placeholder="imagem Do Produto">
+                        <input value="{{ old('imagemDoProduto') }}" class="input" type="text" name="imagemDoProduto" id="imagemDoProduto" placeholder="imagem Do Produto">
                         {{ $errors->has('imagemDoProduto') ? $errors->first('imagemDoProduto') : '' }}
                             <br>
 
