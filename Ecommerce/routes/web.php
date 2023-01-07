@@ -1,20 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     return view('cadastroDeCliente');
@@ -24,11 +12,16 @@ Route::get('/cliente/cadastro', function(){
     return view ('cadastroDeCliente');
 });
 
+//Clientes
 
-Route::get('/cliente/login', function(){
-    return view ('loginDoCliente');
-});
+Route::post('/cliente/cadastrar', [ClienteController::class,'cadastrar'])->name('cliente.cadastrar');
 
-Route::post('/cliente/cadastrar', [ClienteController::class,'cadastrar']);
+Route::post('/cliente/logar', [LoginController::class ,'autenticar'])->name('cliente.login');
 
-Route::post('/cliente/logar', [ClienteController::class ,'logar']);
+Route::get('/cliente/login/{erro?}', [LoginController::class,'index'])->name('cliente.login');
+
+//Produtos
+
+Route::get('/produto/cadastro', [ProdutoController::class,'index'])->name('produto.cadastro');
+
+Route::post('/produto/cadastrar',[ProdutoController::class,'cadastrar'])->name('produto.cadastrar');

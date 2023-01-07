@@ -46,10 +46,11 @@
     <h1>
       Faça Log-in
     </h1>
-    <form class="modal_form" action="">
-      <input type="text" class="input" placeholder="E-mail">
+    <form class="modal_form" action="/cliente/logar ">
+      @csrf
+      <input type="email" name="emailDoCliente" id="emailDoCliente" class="input" placeholder="E-mail">
       <br>
-      <input type="password" class="input" placeholder="Senha">
+      <input class="input" type="password" name="senhaDoCliente" id="senhaDoCliente" placeholder="Senha">
       <br>
       <div class="div_checkbox">
         <label for="" class="container">
@@ -58,14 +59,12 @@
 
         </span>
         </label>
-      
-      
     </div>
       <br>
-      <input type="button" class="button_cont" value="Continuar">
+      <input type="submit" class="button_cont" value="Continuar">
       <br>
       <h4>Não tem uma conta?</h4>
-      <input type="button" class="button_cad" value="Cadastre-se">
+      <input type="submit" class="button_cad" value="Cadastre-se">
     </form>
   </div>
   </div>

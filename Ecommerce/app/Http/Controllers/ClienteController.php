@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Auth;
+
 use App\Models\ClienteCadastro as cliente;
 
 class ClienteController extends Controller
@@ -16,17 +16,10 @@ class ClienteController extends Controller
         
         $cliente->create($request->all());
 
-        return view ('loginDoCliente');
+        return redirect('/cliente/login');
 
      
     }
 
-    public function logar(Request $request)
-    {
-
-        if(Auth::attempt(['email' => $request->$emailDoCliente, 'password' => $request->$senhaDoCliente])){
-            dd('Logou');
-        }
-            dd('Não logou');
-    }
+    
 }
