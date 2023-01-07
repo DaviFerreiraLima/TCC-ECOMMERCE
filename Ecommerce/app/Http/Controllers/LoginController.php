@@ -44,10 +44,14 @@ class LoginController extends Controller
         echo 'Usuario existe <br>';
         //existindo, ele faz a validação de senha
             if($cliente and ($cliente->senhaDoCliente ==  $request->senhaDoCliente)){
-                echo 'Usuario logado';
+                //return redirect()->back()->with('danger','usuario logado');
+                echo ' cliente logado';
             }
-           } else{
-            echo 'Email e/ou senha invalidos';
+        } else{
+
+               //return redirect()->back()->with('danger','Email e/ou senha invalidos');
+                echo 'Email e/ou senha invalidos';
+            
             }
        
        //isolaos dados do request em variaveis "locais" para teste
