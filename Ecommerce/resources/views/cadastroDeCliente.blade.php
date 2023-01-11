@@ -44,27 +44,51 @@
                         <br>
 
                         <div class="inputs">
+
+                        <div class="campo">
                         <input class="input" type="text" name="nomeDoCliente" id="nomeDoCliente" placeholder="Seu Nome">
+                        <div class="aviso_campo">
                         {{ $errors->has('nomeDoCliente') ? $errors->first('nomeDoCliente') : '' }}
+                        </div>
+                        </div>
                         
+                        <div class="campo">
                         <input class="input" type="email" name="emailDoCliente" id="emailDoCliente" placeholder="Email">
+                        <div class="aviso_campo">
                         {{ $errors->has('emailDoCliente') ? $errors->first('emailDoCliente') : '' }}
+                        </div>
+                        </div>
                         
-                        
+                        <div class="campo">
                         <input class="input" type="text" name="cpfDoCliente" id="cpfDoCliente" placeholder="CPF">
+                        <div class="aviso_campo">
                         {{ $errors->has('cpfDoCliente') ? $errors->first('cpfDoCliente') : '' }}
+                        </div>
+                        </div>
                         
-                        
+                        <div class="campo">
                         <input class="input" type="text" name="telefoneDoCliente" id="telefoneDoCliente" placeholder="Telefone">
-                        
+                        <div class="aviso_campo">
                         {{ $errors->has('telefoneDoCliente"') ? $errors->first('telefoneDoCliente') : '' }}
+                        </div>
+                        </div>
                         
+                        <div class="campo">
                         <input class="input" type="date" name="dataDeNascimento" id="dataDeNascimento" placeholder="Data de Nascimento">
+                        <div class="aviso_campo">
                         {{ $errors->has('dataDeNascimento') ? $errors->first('dataDeNascimento') : '' }}
+                        </div>
+                        </div>
                         
                         
+                        <div class="campo">
                         <input class="input" type="password" name="senhaDoCliente" id="senhaDoCliente" placeholder="Senha">
-                        {{ $errors->has('senhaDoCliente') ? $errors->first('senhaDoCliente') : '' }}
+                        <div class="aviso_campo">
+                         {{ $errors->has('senhaDoCliente') ? $errors->first('senhaDoCliente') : '' }}
+                        </div>
+                        </div>
+
+                        
                         <br>
                         </div>
 

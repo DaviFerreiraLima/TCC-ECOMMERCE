@@ -155,3 +155,7 @@ h1{
 [type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0%;
 }
+
+.aviso_campo{
+  color: #FF0000;
+}
