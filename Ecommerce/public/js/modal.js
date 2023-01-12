@@ -1,6 +1,14 @@
 function iniciaModal(modalID) {
   const modal = document.getElementById(modalID);
-  modal.classList.add('mostrar');
+  if (modal) {
+    modal.classList.add('mostrar');
+    modal.addEventListener('click', (e) => {
+      if (e.target.id == modalID || e.target.id == 'fechar') {
+        modal.classList.remove('mostrar');
+      }
+    });
+  }
 }
 
-cost 
+const icon = document.querySelector('.icon');
+icon.addEventListener('click', () => iniciaModal('modal_login')); //id

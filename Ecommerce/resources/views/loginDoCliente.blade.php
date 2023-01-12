@@ -1,66 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>Login do Cliente</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
-    <header>
+  <header class="header">
+  <div class="menu_button" id= "menu_button">
+  <button type="button" class="button__menu" onclick="changeButtonMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+  
+  <div class="logo_icon">
+  <img class="logo" src="/assets/logo.png" alt="">
+</div>
 
-    </header>
-
-    <main>
-    <div class="right-tabela">
-            <div class="input">
-                <div class="personalizacao-tabelas">
-                    <form class="textfield" action="/cliente/logar" method="post">
-                        @csrf
-
-
-                        <div id="modal_login" class="modal_container mostrar">
-  <div class="modal">
-  <button class="fechar">x</button>
-    <h1>
-      Faça Log-in
-    </h1>
-    <form class="modal_form" action="">
-    <input value="{{ old('emailDoCliente') }}" type="email" name="emailDoCliente" id="emailDoCliente" class="input" placeholder="E-mail">
-                            {{ $errors->has('emailDoCliente') ? $errors->first('emailDoCliente') : '' }}
-      <br>
-      <input value="{{ old('senhaDoCliente') }}" class="input" type="password" name="senhaDoCliente" id="senhaDoCliente" placeholder="Senha">
-                        {{ $errors->has('senhaDoCliente') ? $errors->first('senhaDoCliente') : '' }}
-      <br>
-      <div class="div_checkbox">
-        <label for="" class="container">
-          <input type="checkbox" checked="checked">
-<span class="checkmark">Mantenha-me conectado - válido para todos os métodos de log-in.
-
-        </span>
-        </label>
-      
-      
-    </div>
-      <br>
-      <input type="submit" class="button_cont" value="Continuar">
-      <br>
-      <h4>Não tem uma conta?</h4>
-      <input type="button" class="button_cad" value="Cadastre-se">
-    </form>
-  </div>
+  <div class="search_and_icon">
+  <div id="search_bar" class="search_bar">
+    <input type="text" id="txtBusca"/>
+    <img src="/assets/icon_search.png" id="search_button" alt="Buscar"/>
   </div>
 
+  <button id="icon" type="button" class="icon">
+  <img src="/assets/icon _user.png" alt="">
+</button>
 
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
+<button type="button" class="button__features" id="button__features">
+  <img src="/assets/icon _shopping cart.png" alt="">
+</button>
+</div>
 
-    <footer>
+  </header>
+  <script src="/js/main.js"></script>
+  <script src="/js/modal.js"></script>
+  <script src="/js/nav.js"></script>
+  @include('modal_final');
+  @include('navegacao');
 
-    </footer>
+
+
 </body>
 </html>
