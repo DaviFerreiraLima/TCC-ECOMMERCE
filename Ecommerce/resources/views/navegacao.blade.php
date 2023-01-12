@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
-  <div class="navigation" id="fundo">
-  <div class="classes">
-    <button class="categoria">Masculina</button>
+  <div class="navigation" id="fundo" onclick="changeButtonMenu()">
+  <div class="classes" onclick="">
+  
+    <button class="categoria" >Masculina</button>
     <button class="categoria">Feminina</button>
     <button class="categoria">Brasileirão</button>
     <button class="categoria">Champions</button>

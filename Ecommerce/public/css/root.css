@@ -1,0 +1,8 @@
+:root{
+  --text: rgba(255, 255, 255, 1);
+  --header-background:  rgba(1, 1, 1, 1);
+  --header-elements: rgba(255, 255, 255, 1);
+  --nav-backgroud: rgba(0, 14, 24, 1);
+  --nav-text: rgba(255, 255, 255, 1);
+  --nav-text-darker:  #808080;
+}
